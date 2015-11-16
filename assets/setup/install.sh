@@ -124,6 +124,9 @@ echo "UseDNS no" >> /etc/ssh/sshd_config
 # permit password login
 sed 's/#PasswordAuthentication yes/PasswordAuthentication no/' -i /etc/ssh/sshd_config
 
+# change port 
+sed 's/Port 22/Port 666/' -i /etc/ssh/sshd_config
+
 # configure verbose logging for sshd
 sed 's/LogLevel INFO/LogLevel VERBOSE/' -i /etc/ssh/sshd_config
 
